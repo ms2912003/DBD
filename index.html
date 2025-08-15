@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday, Didoz 🎀</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Elegant serif + friendly sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating hearts background -->
+  <div class="bg-hearts" aria-hidden="true"></div>
+
+  <!-- Music control -->
+  <audio id="bg-music" loop>
+    <!-- Replace with her favorite song in your project folder -->
+    <!-- <source src="assets/music/her-favorite-song.mp3" type="audio/mpeg"> -->
+  </audio>
+  <button class="music-toggle" id="musicToggle" aria-label="Toggle music">♪</button>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <h1 class="title reveal">Happy Birthday,<br><span class="name">Didoz</span> 🎂</h1>
+      <p class="subtitle reveal delay-1">You make the world softer, brighter, and so much sweeter.</p>
+      <div class="hero-actions reveal delay-2">
+        <a href="memories.html" class="btn">Start the story</a>
+        <a href="letter.html" class="btn btn-ghost">A letter for you</a>
+    </div>
+      <div class="float-balloons" aria-hidden="true">
+        <span>🎈</span><span>🎈</span><span>🎈</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Inside Jokes / Fun Facts -->
+    <section id="fun" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Inside Jokes & Little Things</h2>
+        <p class="section-subtitle reveal delay-1">Only we get these 😌</p>
+
+        <div class="notes-grid">
+          <div class="note reveal delay-1">“Code Pink” = emergency dessert run 🍰</div>
+          <div class="note reveal delay-2">You + karaoke = unstoppable 😂</div>
+          <div class="note reveal delay-3">Our secret handshake (Version 3.0) 🤝✨</div>
+          <div class="note reveal delay-4">“One coffee” that becomes 4 hours ☕</div>
+          <div class="note reveal delay-5">The ‘don’t laugh’ challenge that we always lose</div>
+          <div class="note reveal delay-6">Sunset chasers since [Year] 🌅</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ending with Surprise -->
+    <section id="ending" class="section soft">
+      <div class="container">
+        <h2 class="section-title reveal">One Last Thing…</h2>
+        <p class="section-subtitle reveal delay-1">Make a wish and press the button.</p>
+
+        <div class="ending-card reveal delay-2">
+          <p>May your year be gentle, joyful, and full of love. You deserve every good thing. 💞</p>
+          <button id="surpriseBtn" class="btn">Click for a Surprise ✨</button>
+          <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
+          <!-- Optional: reveal a cute GIF or image -->
+          <img id="surpriseGif" class="surprise-gif" src="assets/gifs/cute.gif" alt="Cute surprise (optional)" hidden>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with love by Menzo • <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

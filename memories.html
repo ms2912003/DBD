@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memories 💜</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-hearts">
+  <header class="section">
+    <h1 class="section-title">Our Journey Together</h1>
+    <p class="section-subtitle">From 2019 to today — five years of love, laughter, and memories.</p>
+  </header>
+
+  <main class="container">
+    <!-- Timeline Section -->
+    <section id="timeline" class="section soft">
+      <h2 class="section-title reveal">5 Years of Memories</h2>
+      <p class="section-subtitle reveal delay-1">Every moment with you is my favorite.</p>
+
+      <div class="timeline">
+        <!-- 2019 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2019</div>
+          <figure>
+            <img src="assets/photos/2019.jpg" alt="2019 memory" />
+            <figcaption>Where it all began — our very first adventure together. 💜</figcaption>
+          </figure>
+        </div>
+
+        <!-- 2020 -->
+        <div class="timeline-item reveal delay-1">
+          <div class="timeline-year">2020</div>
+          <figure>
+            <img src="assets/photos/2020.jpg" alt="2020 memory" />
+            <figcaption>Quarantine days, but still smiling because we had each other. 🏡</figcaption>
+          </figure>
+        </div>
+
+        <!-- 2021 -->
+        <div class="timeline-item reveal delay-2">
+          <div class="timeline-year">2021</div>
+          <figure>
+            <img src="assets/photos/2021.jpg" alt="2021 memory" />
+            <figcaption>Our spontaneous trip — no plans, just us and the open road. 🚗</figcaption>
+          </figure>
+        </div>
+
+        <!-- 2022 -->
+        <div class="timeline-item reveal delay-3">
+          <div class="timeline-year">2022</div>
+          <figure>
+            <img src="assets/photos/2022.jpg" alt="2022 memory" />
+            <figcaption>Celebrating milestones together — we were unstoppable. ✨</figcaption>
+          </figure>
+        </div>
+
+        <!-- 2023 -->
+        <div class="timeline-item reveal delay-4">
+          <div class="timeline-year">2023</div>
+          <figure>
+            <img src="assets/photos/2023.jpg" alt="2023 memory" />
+            <figcaption>The year of new beginnings, and so many little adventures. 🌸</figcaption>
+          </figure>
+        </div>
+
+        <!-- 2024 -->
+        <div class="timeline-item reveal delay-5">
+          <div class="timeline-year">2024</div>
+          <figure>
+            <img src="assets/photos/2024.jpg" alt="2024 memory" />
+            <figcaption>Finding beauty in every small moment with you. 🍂</figcaption>
+          </figure>
+        </div>
+
+        <!-- 2025 -->
+        <div class="timeline-item reveal delay-6">
+          <div class="timeline-year">2025</div>
+          <figure>
+            <img src="assets/photos/2025.jpg" alt="2025 memory" />
+            <figcaption>Here we are — five years stronger, and still my favorite person. ❤️</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with love by [Your Name] • <span id="year"></span></p>
+  </footer>
+
+  <script>
+    // auto-update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      for (let el of reveals) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) el.classList.add('visible');
+      }
+    });
+  </script>
+</body>
+</html>
