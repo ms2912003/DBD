@@ -3,23 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Happy Birthday, Didoz 🎀</title>
+  <title>Didoz Birthday🎀</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Elegant serif + friendly sans -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Floating hearts background -->
   <div class="bg-hearts" aria-hidden="true"></div>
 
-  <!-- Music control -->
   <audio id="bg-music" loop>
-    <!-- Replace with her favorite song in your project folder -->
-    <!-- <source src="assets/music/her-favorite-song.mp3" type="audio/mpeg"> -->
-  </audio>
+    </audio>
   <button class="music-toggle" id="musicToggle" aria-label="Toggle music">♪</button>
 
   <header class="hero">
@@ -28,8 +23,7 @@
       <p class="subtitle reveal delay-1">You make the world softer, brighter, and so much sweeter.</p>
       <div class="hero-actions reveal delay-2">
         <a href="memories.html" class="btn">Start the story</a>
-        <a href="letter.html" class="btn btn-ghost">A letter for you</a>
-    </div>
+      </div>
       <div class="float-balloons" aria-hidden="true">
         <span>🎈</span><span>🎈</span><span>🎈</span>
       </div>
@@ -37,39 +31,40 @@
   </header>
 
   <main>
-
-    <!-- Inside Jokes / Fun Facts -->
-    <section id="fun" class="section">
+    <div class="hero-inner">
+      <h1 class="title">A Little Letter</h1>
+      <p class="subtitle">Just for you. ❤️</p>
+    </div>
+  <section id="message" class="section soft">
       <div class="container">
-        <h2 class="section-title reveal">Inside Jokes & Little Things</h2>
-        <p class="section-subtitle reveal delay-1">Only we get these 😌</p>
-
-        <div class="notes-grid">
-          <div class="note reveal delay-1">“Code Pink” = emergency dessert run 🍰</div>
-          <div class="note reveal delay-2">You + karaoke = unstoppable 😂</div>
-          <div class="note reveal delay-3">Our secret handshake (Version 3.0) 🤝✨</div>
-          <div class="note reveal delay-4">“One coffee” that becomes 4 hours ☕</div>
-          <div class="note reveal delay-5">The ‘don’t laugh’ challenge that we always lose</div>
-          <div class="note reveal delay-6">Sunset chasers since [Year] 🌅</div>
-        </div>
+        <article class="letter">
+          <p>،صديقتي الصدوقةالعزيزة </>
+          <p>
+            😂حبيت السنة دي أحتفل بيكي بشكل مختلف وأعبرلك قد إيه كل سنة بتعدي بتزيد غلاوتك عندي وأشتاقلك وأحبك
+          </p>
+          <p> مش مصدقة إن عدى خمس سنين والله 😂❤️المهم كل سنة وأنت معايا وربنا يخليكي ليا و مايحرمنيش منك أبداً وحقيقي لو رجع بيا الزمن دايماً هتكوني الاختيار الأول والأخير  ويارب السنة دي تحققي كل إللي نفسك فيه وتتخرجي بأعلى و أحسن تقدير وتشتغلي في أفضل وأحسن مكان ولازم تكوني عارفة إن أنا معاكي دايماً في كل خطوة في حياتك الجاية طول ما ربنا مديني عمر 
+          </p>
+          <p> 😂خلاص وصلتي لسن الرشد وهتبقي إنسانة مستقلة
+            😂❤️و في الختام أتمنى لكي يوم سعيد وسنة سعيدة وياريت نتقابل بقى عشان عاوزة أخش سينما 
+          </p>
+          <p>Love you to the moon and back❤️❤️❤️ </p>
+          <p class="signature">— Menzo</p>
+        </article>
       </div>
     </section>
-
-    <!-- Ending with Surprise -->
     <section id="ending" class="section soft">
-      <div class="container">
-        <h2 class="section-title reveal">One Last Thing…</h2>
-        <p class="section-subtitle reveal delay-1">Make a wish and press the button.</p>
+  <div class="container">
+    <h2 class="section-title reveal">One Last Thing…</h2> <p class="section-subtitle reveal delay-1">Make a wish and press the button.</p>
+    <p class="section-subtitle reveal delay-1">Type your wish below, and I promise I’ll do my best to make it come true. ✨💖</p>
 
-        <div class="ending-card reveal delay-2">
-          <p>May your year be gentle, joyful, and full of love. You deserve every good thing. 💞</p>
-          <button id="surpriseBtn" class="btn">Click for a Surprise ✨</button>
-          <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
-          <!-- Optional: reveal a cute GIF or image -->
-          <img id="surpriseGif" class="surprise-gif" src="assets/gifs/cute.gif" alt="Cute surprise (optional)" hidden>
-        </div>
-      </div>
-    </section>
+    <form action="https://formspree.io/f/mpwlnegz" method="POST" class="wish-form reveal delay-2">
+      <textarea name="wish" placeholder="Write your wish here..." required></textarea>
+      <input type="hidden" name="from" value="Didoz Birthday Website">
+      <button type="submit" class="btn">Send My Wish 🎁</button>
+    </form>
+
+  </div>
+</section>
   </main>
 
   <footer class="footer">
