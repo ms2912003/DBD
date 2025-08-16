@@ -1,24 +1,17 @@
 /* ====== Theme (Dreamy Soft Aesthetic) ====== */
 :root {
-  --bg: #f9f5ff;         /* light lavender background */
-  --bg-soft: #f3e8ff;    /* soft pastel purple */
-  --text: #3d2b57;       /* deep purple text */
-  --muted: #7a5fa3;      /* softer purple for subtitles */
-  --primary: #a020f0;    /* bright purple */
-  --primary-weak: #d8b4fe; /* light purple accent */
-  --accent: #e0b3ff;     /* lavender-pink blend */
+  --bg: #f9f5ff;        
+  --bg-soft: #f3e8ff;    
+  --text: #3d2b57;      
+  --muted: #7a5fa3;     
+  --primary: #a020f0;   
+  --primary-weak: #d8b4fe; 
+  --accent: #e0b3ff;    
   --card: #ffffff;
   --shadow: 0 10px 30px rgba(0,0,0,0.08);
   --radius: 22px;
 }
 
-/* Switch to a party vibe quickly (optional) */
-/*
-:root{
-  --bg:#fff8e6; --bg-soft:#fff4d6; --text:#2e2131; --muted:#6a5a6d;
-  --primary:#ff5d73; --primary-weak:#ffd1d8; --accent:#ffd166; --card:#ffffff; --shadow:0 12px 34px rgba(0,0,0,.12); --radius:18px;
-}
-*/
 
 * { box-sizing: border-box; }
 html, body { margin:0; padding:0; scroll-behavior:smooth; }
@@ -206,7 +199,6 @@ body {
   .slide img{ height: 260px; }
 }
 
-/* Add to your style.css file */
 
 /* Photo Grid */
 .photo-grid {
@@ -222,8 +214,6 @@ body {
   box-shadow: var(--shadow);
   overflow: hidden;
   border: 1px solid var(--primary-weak);
-  /* You can add a subtle rotation like the notes here too */
-  /* transform: rotate(-0.5deg); */
 }
 
 .photo-item img {
@@ -332,3 +322,64 @@ header.section {
   margin-top: 5px;
   font-style: italic;
 }
+
+
+.music-toggle {
+  position:fixed;
+  bottom: 20px;
+  left: 0px;
+  background: #ff80ab;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+.music-toggle:hover {
+  background: #f50057;
+}
+
+/* ===== Fireworks canvas behind everything ===== */
+#fireworks{
+  position: fixed;
+  inset: 0;
+  width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Balloons layer sits above fireworks but below main content */
+.balloons{
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.balloon{
+  position: absolute;
+  bottom: -10vh;
+  left: var(--x, 50%);
+  font-size: clamp(22px, 4.2vw, 44px);
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.15));
+  animation: floatUp var(--dur, 18s) linear infinite;
+  animation-delay: var(--delay, 0s);
+  opacity: .9;
+}
+@keyframes floatUp{
+  0%   { transform: translateY(10vh) translateX(0) rotate(0deg); opacity:.0; }
+  10%  { opacity:.9; }
+  50%  { transform: translateY(-40vh) translateX(-10px) rotate(6deg); }
+  100% { transform: translateY(-120vh) translateX(10px) rotate(-6deg); opacity:.2; }
+}
+
+/* Make sure your hero/content sits above effects */
+.hero, main, header, footer, .music-toggle, .bg-hearts {
+  position: relative;
+  z-index: 2;
+}
+
+

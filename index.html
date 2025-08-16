@@ -10,11 +10,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+  <canvas id="fireworks" aria-hidden="true"></canvas>
   <div class="bg-hearts" aria-hidden="true"></div>
+  <div class="balloons" aria-hidden="true">
+  <span class="balloon" style="--x:8%;  --delay:0s;  --dur:16s">🎈</span>
+  <span class="balloon" style="--x:18%; --delay:2s;  --dur:18s">🎈</span>
+  <span class="balloon" style="--x:28%; --delay:1s;  --dur:20s">🎈</span>
+  <span class="balloon" style="--x:38%; --delay:3s;  --dur:19s">🎈</span>
+  <span class="balloon" style="--x:48%; --delay:0.5s;--dur:17s">🎈</span>
+  <span class="balloon" style="--x:58%; --delay:2.5s;--dur:21s">🎈</span>
+  <span class="balloon" style="--x:68%; --delay:1.8s;--dur:18s">🎈</span>
+  <span class="balloon" style="--x:78%; --delay:0.8s;--dur:22s">🎈</span>
+  <span class="balloon" style="--x:88%; --delay:2.2s;--dur:19s">🎈</span>
+ </div>
 
   <audio id="bg-music" loop>
-    </audio>
+    <source src="assets/music/music.mp3" type="audio/mpeg">
+  </audio>
   <button class="music-toggle" id="musicToggle" aria-label="Toggle music">♪</button>
 
   <header class="hero">
